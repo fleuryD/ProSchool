@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{992032BD-CDF9-4543-8075-89D47CBEC8D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProSchool</RootNamespace>
+    <AssemblyName>ProSchool</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Csv, Version=1.0.40.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Csv.1.0.40\lib\net40\Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.Generic, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\net40\SQLite.Net.Platform.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.Win32, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\net4\SQLite.Net.Platform.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class_Appel.cs" />
+    <Compile Include="Class_BoutonMenu.cs" />
+    <Compile Include="Class_Chatte.cs" />
+    <Compile Include="Class_Classe.cs" />
+    <Compile Include="Class_Eleve.cs" />
+    <Compile Include="Class_Accompagnement.cs" />
+    <Compile Include="Class_Evenement.cs" />
+    <Compile Include="Class_Jour.cs" />
+    <Compile Include="Class_Personnel.cs" />
+    <Compile Include="Class_Responsable.cs" />
+    <Compile Include="Class_Suivi.cs" />
+    <Compile Include="Class_SuiviGenre.cs" />
+    <Compile Include="Class_Utilisateur.cs" />
+    <Compile Include="Class___Global.cs" />
+    <Compile Include="F0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F0.Designer.cs">
+      <DependentUpon>F0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_About.Designer.cs">
+      <DependentUpon>F_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Accompagnements_Recap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Accompagnements_Recap.Designer.cs">
+      <DependentUpon>F_Accompagnements_Recap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Accompagnements_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Accompagnements_Options.Designer.cs">
+      <DependentUpon>F_Accompagnements_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Accompagnement_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Accompagnement_Edit.Designer.cs">
+      <DependentUpon>F_Accompagnement_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Accompagnement_Eleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Accompagnement_Eleve.Designer.cs">
+      <DependentUpon>F_Accompagnement_Eleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Appels_Faire_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Appels_Faire_v2.Designer.cs">
+      <DependentUpon>F_Appels_Faire_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Appels_Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Appels_Stats.Designer.cs">
+      <DependentUpon>F_Appels_Stats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Appel_Noter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Appel_Noter.Designer.cs">
+      <DependentUpon>F_Appel_Noter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Appels_Faire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Appels_Faire.Designer.cs">
+      <DependentUpon>F_Appels_Faire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Appels_Recap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Appels_Recap.Designer.cs">
+      <DependentUpon>F_Appels_Recap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Appels_RecapAbsences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Appels_RecapAbsences.Designer.cs">
+      <DependentUpon>F_Appels_RecapAbsences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Calendar.Designer.cs">
+      <DependentUpon>F_Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Calendar_Evenements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Calendar_Evenements.Designer.cs">
+      <DependentUpon>F_Calendar_Evenements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Calendar_EvenementtAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Calendar_EvenementtAdd.Designer.cs">
+      <DependentUpon>F_Calendar_EvenementtAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Chatte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Chatte.Designer.cs">
+      <DependentUpon>F_Chatte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Classes_Liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Classes_Liste.Designer.cs">
+      <DependentUpon>F_Classes_Liste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Classe_Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Classe_Modifier.Designer.cs">
+      <DependentUpon>F_Classe_Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleves_Absences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleves_Absences.Designer.cs">
+      <DependentUpon>F_Eleves_Absences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleves_Absences_Dgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleves_Absences_Dgv.Designer.cs">
+      <DependentUpon>F_Eleves_Absences_Dgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleves_Liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleves_Liste.Designer.cs">
+      <DependentUpon>F_Eleves_Liste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleves_Liste_DgvOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleves_Liste_DgvOptions.Designer.cs">
+      <DependentUpon>F_Eleves_Liste_DgvOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleves_Suivi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleves_Suivi.Designer.cs">
+      <DependentUpon>F_Eleves_Suivi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleve_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleve_Add.Designer.cs">
+      <DependentUpon>F_Eleve_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Eleve_Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Eleve_Delete.Designer.cs">
+      <DependentUpon>F_Eleve_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Options_Accompagnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Options_Accompagnement.Designer.cs">
+      <DependentUpon>F_Options_Accompagnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Options_ImporterClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Options_ImporterClasses.Designer.cs">
+      <DependentUpon>F_Options_ImporterClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Options_Importer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Options_Importer.Designer.cs">
+      <DependentUpon>F_Options_Importer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Options_ImporterEleves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Options_ImporterEleves.Designer.cs">
+      <DependentUpon>F_Options_ImporterEleves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Options_ImporterResponsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Options_ImporterResponsables.Designer.cs">
+      <DependentUpon>F_Options_ImporterResponsables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Options_User_Autorisations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Options_User_Autorisations.Designer.cs">
+      <DependentUpon>F_Options_User_Autorisations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Personnels_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Personnels_Add.Designer.cs">
+      <DependentUpon>F_Personnels_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Personnels_Liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Personnels_Liste.Designer.cs">
+      <DependentUpon>F_Personnels_Liste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Responsables_Eleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Responsables_Eleve.Designer.cs">
+      <DependentUpon>F_Responsables_Eleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Responsables_Liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Responsables_Liste.Designer.cs">
+      <DependentUpon>F_Responsables_Liste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_SelectPersonnelsEleves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_SelectPersonnelsEleves.Designer.cs">
+      <DependentUpon>F_SelectPersonnelsEleves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Suivis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Suivis.Designer.cs">
+      <DependentUpon>F_Suivis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Suivis_1Eleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Suivis_1Eleve.Designer.cs">
+      <DependentUpon>F_Suivis_1Eleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Suivi_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Suivi_Add.Designer.cs">
+      <DependentUpon>F_Suivi_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_TableauDeBord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_TableauDeBord.Designer.cs">
+      <DependentUpon>F_TableauDeBord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_User_Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_User_Connexion.Designer.cs">
+      <DependentUpon>F_User_Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_User_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_User_Login.Designer.cs">
+      <DependentUpon>F_User_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Wip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Wip.Designer.cs">
+      <DependentUpon>F_Wip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F______model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F______model.Designer.cs">
+      <DependentUpon>F______model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl_AppelClasseRecap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_AppelClasseRecap.Designer.cs">
+      <DependentUpon>UserControl_AppelClasseRecap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_AppelEleveRecap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_AppelEleveRecap.Designer.cs">
+      <DependentUpon>UserControl_AppelEleveRecap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Calendar_Day.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Calendar_Day.Designer.cs">
+      <DependentUpon>UserControl_Calendar_Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Calendar_Day_Absences.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Calendar_Day_Absences.Designer.cs">
+      <DependentUpon>UserControl_Calendar_Day_Absences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Evenement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Evenement.Designer.cs">
+      <DependentUpon>UserControl_Evenement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_ItemPersonne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_ItemPersonne.Designer.cs">
+      <DependentUpon>UserControl_ItemPersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Menu.Designer.cs">
+      <DependentUpon>UserControl_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_MenuTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_MenuTab.Designer.cs">
+      <DependentUpon>UserControl_MenuTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Responsable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Responsable.Designer.cs">
+      <DependentUpon>UserControl_Responsable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Suivi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Suivi.Designer.cs">
+      <DependentUpon>UserControl_Suivi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="F0.resx">
+      <DependentUpon>F0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_About.resx">
+      <DependentUpon>F_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Accompagnements_Recap.resx">
+      <DependentUpon>F_Accompagnements_Recap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Accompagnements_Options.resx">
+      <DependentUpon>F_Accompagnements_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Accompagnement_Edit.resx">
+      <DependentUpon>F_Accompagnement_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Accompagnement_Eleve.resx">
+      <DependentUpon>F_Accompagnement_Eleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Appels_Faire_v2.resx">
+      <DependentUpon>F_Appels_Faire_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Appels_Stats.resx">
+      <DependentUpon>F_Appels_Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Appel_Noter.resx">
+      <DependentUpon>F_Appel_Noter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Appels_Faire.resx">
+      <DependentUpon>F_Appels_Faire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Appels_Recap.resx">
+      <DependentUpon>F_Appels_Recap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Appels_RecapAbsences.resx">
+      <DependentUpon>F_Appels_RecapAbsences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Calendar.resx">
+      <DependentUpon>F_Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Calendar_Evenements.resx">
+      <DependentUpon>F_Calendar_Evenements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Calendar_EvenementtAdd.resx">
+      <DependentUpon>F_Calendar_EvenementtAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Chatte.resx">
+      <DependentUpon>F_Chatte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Classes_Liste.resx">
+      <DependentUpon>F_Classes_Liste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Classe_Modifier.resx">
+      <DependentUpon>F_Classe_Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleves_Absences.resx">
+      <DependentUpon>F_Eleves_Absences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleves_Absences_DGV.resx">
+      <DependentUpon>F_Eleves_Absences_Dgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleves_Liste.resx">
+      <DependentUpon>F_Eleves_Liste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleves_Liste_DgvOptions.resx">
+      <DependentUpon>F_Eleves_Liste_DgvOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleves_Suivi.resx">
+      <DependentUpon>F_Eleves_Suivi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleve_Add.resx">
+      <DependentUpon>F_Eleve_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Eleve_Delete.resx">
+      <DependentUpon>F_Eleve_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Options_Accompagnement.resx">
+      <DependentUpon>F_Options_Accompagnement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Options_ImporterClasses.resx">
+      <DependentUpon>F_Options_ImporterClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Options_Importer.resx">
+      <DependentUpon>F_Options_Importer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Options_ImporterEleves.resx">
+      <DependentUpon>F_Options_ImporterEleves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Options_ImporterResponsables.resx">
+      <DependentUpon>F_Options_ImporterResponsables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Options_User_Autorisations.resx">
+      <DependentUpon>F_Options_User_Autorisations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Personnels_Add.resx">
+      <DependentUpon>F_Personnels_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Personnels_Liste.resx">
+      <DependentUpon>F_Personnels_Liste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Responsables_Eleve.resx">
+      <DependentUpon>F_Responsables_Eleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Responsables_Liste.resx">
+      <DependentUpon>F_Responsables_Liste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_SelectPersonnelsEleves.resx">
+      <DependentUpon>F_SelectPersonnelsEleves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Suivis.resx">
+      <DependentUpon>F_Suivis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Suivis_1Eleve.resx">
+      <DependentUpon>F_Suivis_1Eleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Suivi_Add.resx">
+      <DependentUpon>F_Suivi_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_TableauDeBord.resx">
+      <DependentUpon>F_TableauDeBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_User_Connexion.resx">
+      <DependentUpon>F_User_Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_User_Login.resx">
+      <DependentUpon>F_User_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Wip.resx">
+      <DependentUpon>F_Wip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl_AppelClasseRecap.resx">
+      <DependentUpon>UserControl_AppelClasseRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_AppelEleveRecap.resx">
+      <DependentUpon>UserControl_AppelEleveRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Calendar_Day.resx">
+      <DependentUpon>UserControl_Calendar_Day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Calendar_Day_Absences.resx">
+      <DependentUpon>UserControl_Calendar_Day_Absences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Evenement.resx">
+      <DependentUpon>UserControl_Evenement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_ItemPersonne.resx">
+      <DependentUpon>UserControl_ItemPersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Menu.resx">
+      <DependentUpon>UserControl_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_MenuTab.resx">
+      <DependentUpon>UserControl_MenuTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Responsable.resx">
+      <DependentUpon>UserControl_Responsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Suivi.resx">
+      <DependentUpon>UserControl_Suivi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DJB Number 2 Pencil.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

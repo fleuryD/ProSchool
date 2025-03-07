@@ -1,0 +1,17 @@
+# Fichiers binaires et objets compilés
+bin/
+obj/
+
+# Dossiers spécifiques à Visual Studio
+.vs/
+*.suo
+*.user
+*.cache
+*.VC.db
+
+# Fichiers de build
+*.pdb
+*.ilk
+*.obj
+*.log
+*.tmp
